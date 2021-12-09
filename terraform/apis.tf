@@ -33,9 +33,3 @@ resource "google_project_service" "container_registry" {
   disable_on_destroy         = true
 }
 
-# Artifact Registry API
-resource "google_project_service" "artifact_registry" {
-  service                    = "artifactregistry.googleapis.com"
-  disable_dependent_services = true
-  disable_on_destroy         = true
-}

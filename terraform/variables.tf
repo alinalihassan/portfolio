@@ -5,7 +5,7 @@ variable "region" {
 
 variable "gcr_region" {
   description = "The super-region where resources should be created"
-  default     = "EU"
+  default     = "eu"
 }
 
 variable "project" {
@@ -15,5 +15,5 @@ variable "project" {
 
 variable "app_port" {
   description = "The port where the application should be exposed"
-  default     = "3000"
+  default     = "8080"
 }

@@ -1,6 +1,6 @@
 
 resource "google_cloud_run_service" "portfolio_service" {
-  name                       = "portfolio-service"
+  name                       = "portfolio"
   location                   = var.region
   autogenerate_revision_name = true
 

@@ -66,6 +66,7 @@ jobs:
       with:
         service: ${{ secrets.APP_NAME }}
         image: ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
+        region: ${{ secrets.GCLOUD_REGION }}
     
     # - uses: hashicorp/setup-terraform@v1
     #   with:
