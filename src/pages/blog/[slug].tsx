@@ -15,7 +15,7 @@ export default function BlogPost({ post, mdxSource }: any) {
 
 	const components = {
 		img: (props: any) => (
-			<Image
+			<img
 				{...props}
 				width={1920}
 				height={1080}

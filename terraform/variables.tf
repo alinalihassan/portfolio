@@ -15,7 +15,7 @@ variable "project" {
 
 variable "app_port" {
   description = "The port where the application should be exposed"
-  default     = "8080"
+  default     = "3000"
 }
 
 variable "domain_name" {

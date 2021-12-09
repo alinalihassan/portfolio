@@ -15,7 +15,7 @@ const Certificate: FC<CertificateProps> = ({ certificate }) => {
 	return (
 		<StyledCertificate>
 			<Grid columns={12} rows={2}>
-				<Cell width={1} height={2}><Image src={certificate.image} width="56px" height="56px" alt="Certificate Badge" /></Cell>
+				<Cell width={1} height={2}><img src={certificate.image} width="56px" height="56px" alt="Certificate Badge" /></Cell>
 				<Cell height={1} width={10}>
 					<div>
 						<strong>
