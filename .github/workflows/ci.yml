@@ -47,7 +47,8 @@ jobs:
         project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
         credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }}
 
-    - uses: whoan/docker-build-with-cache-action@v5
+    - name: Build and Push Image
+      uses: whoan/docker-build-with-cache-action@v5
       with:
         username: _json_key
         password: "${{ secrets.GCLOUD_SERVICE_KEY }}"
@@ -62,42 +63,30 @@ jobs:
         service: ${{ secrets.APP_NAME }}
         image: ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
         region: ${{ secrets.GCLOUD_REGION }}
-
-    - name: Google Cloud Run Redeploy
-      run: |-
-        gcloud run deploy ${{ secrets.APP_NAME }} \
-        --image ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest \
-        --region ${{ secrets.GCLOUD_REGION }}
     
-    # - uses: hashicorp/setup-terraform@v1
-    #   with:
-    #     cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+    - uses: hashicorp/setup-terraform@v1
+      with:
+        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-    # - name: Terraform Format
-    #   id: fmt
-    #   run: terraform fmt -check
-    #   continue-on-error: true
-    #   working-directory: terraform
+    - name: Terraform Format
+      id: fmt
+      run: terraform fmt -check
+      continue-on-error: true
+      working-directory: terraform
 
-    # - name: Terraform Init
-    #   id: init
-    #   run: terraform init
-    #   working-directory: terraform
+    - name: Terraform Init
+      id: init
+      run: terraform init
+      working-directory: terraform
 
-    # - name: Terraform Validate
-    #   id: validate
-    #   run: terraform validate -no-color
-    #   working-directory: terraform
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
+      working-directory: terraform
 
-    # - name: Terraform Linter
-    #   uses: notrenderfarm/tflint-action@v1.2
-    #   with:
-    #     directory: 'terraform'
-
-    # - name: Terraform Apply
-    #   id: apply
-    #   if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-    #   run: terraform apply -auto-approve
-    #   working-directory: terraform
-    #   env:
-    #     GOOGLE_CREDENTIALS: ${{ secrets.GCLOUD_CREDENTIALS }}
+    - name: Terraform Apply
+      id: apply
+      run: terraform apply -auto-approve
+      working-directory: terraform
+      # env:
+      #   GOOGLE_CREDENTIALS: ${{ secrets.GCLOUD_CREDENTIALS }}
