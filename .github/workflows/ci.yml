@@ -60,13 +60,18 @@ jobs:
         docker tag ${{ secrets.APP_NAME }}:latest ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
         docker push ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
     
-    - name: Deploy to Cloud Run
-      id: deploy
-      uses: google-github-actions/deploy-cloudrun@v0.6.0
-      with:
-        service: ${{ secrets.APP_NAME }}
-        image: ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
-        region: ${{ secrets.GCLOUD_REGION }}
+    # - name: Deploy to Cloud Run
+    #   id: deploy
+    #   uses: google-github-actions/deploy-cloudrun@v0.6.0
+    #   with:
+    #     service: ${{ secrets.APP_NAME }}
+    #     image: ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
+    #     region: ${{ secrets.GCLOUD_REGION }}
+    - name: Google Cloud Run Redeploy
+      run: |-
+        gcloud run deploy ${{ secrets.APP_NAME }}-service \
+        --image ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest \
+        --region ${{ secrets.GCLOUD_REGION }}
     
     # - uses: hashicorp/setup-terraform@v1
     #   with:
