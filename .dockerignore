@@ -1,0 +1,12 @@
+.git
+.gitignore
+.vscode
+
+# Compiled files
+**/.terraform/*
+**/.terragrunt-cache/*
+*.tfstate
+*.tfstate.*
+
+# Module directory
+.terraform

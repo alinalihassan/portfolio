@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # Monorepo package dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    target-branch: develop
+    schedule:
+      interval: "daily"
+
+  # Maintain GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    target-branch: develop
+    schedule:
+      interval: "daily"

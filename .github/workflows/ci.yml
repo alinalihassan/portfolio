@@ -1,0 +1,102 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        check-latest: true
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
+    - name: Build packages
+      run: yarn run build
+
+    - name: Lint code
+      run: yarn run lint
+      continue-on-error: true
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Google Cloud
+      uses: google-github-actions/auth@v0.4.1
+      with:
+        project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
+        service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
+        export_default_credentials: true
+
+    - name: Login to GCR
+      uses: docker/login-action@v1
+      with:
+        registry: ${{ secrets.GCLOUD_REGISTRY_URL }}
+        username: _json_key
+        password: ${{ secrets.GCLOUD_SERVICE_KEY }}
+  
+    - name: Build & Deploy Docker Image
+      run: |-
+        docker build -t ${{ secrets.APP_NAME }}:latest .
+        docker tag ${{ secrets.APP_NAME }}:latest ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
+        docker push ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
+    
+    - name: Deploy to Cloud Run
+      id: deploy
+      uses: google-github-actions/deploy-cloudrun@v0.6.0
+      with:
+        service: ${{ secrets.APP_NAME }}
+        image: ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
+    
+    # - uses: hashicorp/setup-terraform@v1
+    #   with:
+    #     cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+
+    # - name: Terraform Format
+    #   id: fmt
+    #   run: terraform fmt -check
+    #   continue-on-error: true
+    #   working-directory: terraform
+
+    # - name: Terraform Init
+    #   id: init
+    #   run: terraform init
+    #   working-directory: terraform
+
+    # - name: Terraform Validate
+    #   id: validate
+    #   run: terraform validate -no-color
+    #   working-directory: terraform
+
+    # - name: Terraform Linter
+    #   uses: notrenderfarm/tflint-action@v1.2
+    #   with:
+    #     directory: 'terraform'
+
+    # - name: Terraform Apply
+    #   id: apply
+    #   if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    #   run: terraform apply -auto-approve
+    #   working-directory: terraform
+    #   env:
+    #     GOOGLE_CREDENTIALS: ${{ secrets.GCLOUD_CREDENTIALS }}
