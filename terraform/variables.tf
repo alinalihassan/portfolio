@@ -17,3 +17,13 @@ variable "app_port" {
   description = "The port where the application should be exposed"
   default     = "8080"
 }
+
+variable "domain_name" {
+  description = "Domain name of the application"
+  default     = "alinalihassan.com"
+}
+
+variable "domain_name_alt" {
+  description = "Domain name alternative of the application"
+  default     = "hassanalinali.com"
+}

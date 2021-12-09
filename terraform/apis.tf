@@ -33,3 +33,10 @@ resource "google_project_service" "container_registry" {
   disable_on_destroy         = true
 }
 
+# Compute Engine API
+resource "google_project_service" "compute_engine" {
+  service                    = "compute.googleapis.com"
+  disable_dependent_services = true
+  disable_on_destroy         = true
+}
+
