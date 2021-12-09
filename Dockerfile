@@ -29,4 +29,4 @@ COPY --from=builder /app/package.json ./package.json
 USER nextjs
 EXPOSE 8080
 
-CMD ["yarn", "run", "dev"]
+CMD ["yarn", "start"]

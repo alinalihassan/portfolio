@@ -1,12 +1,10 @@
-import absoluteUrl from 'next-absolute-url';
-import { fetcher } from 'Utils/fetcher';
-import { GetServerSideProps } from 'next';
 import { ISkills } from 'Types';
 import styled from 'styled-components';
 import Typed from 'react-typed';
 
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
+import skills from '../data/skills';
 
 interface IProps {
 	skills: ISkills;
@@ -63,10 +61,7 @@ function Home({ skills }: IProps) {
 	);
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-	const { origin } = absoluteUrl(req);
-	const skills = await fetcher(`${origin}/api/skills`);
-
+export async function getStaticProps() {
 	return {
 		props: {
 			skills,

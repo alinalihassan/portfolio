@@ -1,7 +1,4 @@
-import absoluteUrl from 'next-absolute-url';
 import { differenceInCalendarYears } from 'date-fns';
-import { fetcher } from 'Utils/fetcher';
-import { GetServerSideProps } from 'next';
 import styled from 'styled-components';
 import { useState } from 'react';
 
@@ -12,6 +9,9 @@ import { Education } from 'Atoms/Education';
 import { Certificate } from 'Atoms/Certificate';
 import { Position } from 'Atoms/Position';
 import { SeoHead } from 'Atoms/SeoHead';
+import jobs from '../data/jobs';
+import education from '../data/education';
+import certificates from '../data/certificates';
 
 interface IProps {
 	jobs: IJob[];
@@ -128,15 +128,10 @@ const Center = styled.div`
 	}
 `;
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-	const { origin } = absoluteUrl(req);
-	const { positions } = await fetcher(`${origin}/api/jobs`);
-	const { education } = await fetcher(`${origin}/api/education`);
-	const { certificates } = await fetcher(`${origin}/api/certificates`);
-
+export async function getStaticProps() {
 	return {
 		props: {
-			jobs: positions,
+			jobs,
 			education,
 			certificates,
 		},
