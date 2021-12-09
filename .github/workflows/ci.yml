@@ -71,6 +71,7 @@ jobs:
       id: deploy
       uses: google-github-actions/deploy-cloudrun@v0.6.0
       with:
+        project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
         service: ${{ secrets.APP_NAME }}
         image: ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
         region: ${{ secrets.GCLOUD_REGION }}
