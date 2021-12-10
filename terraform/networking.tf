@@ -64,7 +64,7 @@ resource "google_compute_target_https_proxy" "default" {
 }
 
 resource "google_compute_managed_ssl_certificate" "alinalihassan" {
-  name    = "portfolio-ssl-cert"
+  name = "portfolio-ssl-cert"
 
   managed {
     domains = ["${var.domain_name}.", "www.${var.domain_name}."]
@@ -72,7 +72,7 @@ resource "google_compute_managed_ssl_certificate" "alinalihassan" {
 }
 
 resource "google_compute_managed_ssl_certificate" "hassanalinali" {
-  name    = "portfolio-ssl-cert-alias"
+  name = "portfolio-ssl-cert-alias"
 
   managed {
     domains = ["${var.domain_name_alt}.", "www.${var.domain_name_alt}."]
