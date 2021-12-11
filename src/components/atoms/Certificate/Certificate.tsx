@@ -1,9 +1,8 @@
 import { FC } from 'react';
 import { format } from 'date-fns';
-import { StyledCertificate } from './styles';
+import { StyledCertificate, Parent, UpperPart, CertificateBody } from './styles';
 import { ICertificate } from 'Types/certificate';
 import Image from 'next/image';
-import { Grid, Cell } from "styled-css-grid";
 import { shimmer } from 'Utils/shimmer';
 
 export interface CertificateProps {
@@ -13,18 +12,16 @@ export interface CertificateProps {
 const Certificate: FC<CertificateProps> = ({ certificate }) => {
 	return (
 		<StyledCertificate>
-			<Grid columns={12} rows={2}>
-				<Cell width={1} height={2}>
-					<Image
-						src={certificate.image}
-						width="56px"
-						height="56px"
-						placeholder="blur"
-						blurDataURL={shimmer(56, 56)}
-						alt="Certificate Badge" />
-				</Cell>
-				<Cell height={1} width={10}>
-					<div>
+			<Parent>
+				<Image
+					src={certificate.image}
+					width="56px"
+					height="56px"
+					placeholder="blur"
+					blurDataURL={shimmer(56, 56)}
+					alt="Certificate Badge" />
+				<CertificateBody>
+					<UpperPart>
 						<strong>
 							{certificate.link ? (
 								<a
@@ -38,17 +35,11 @@ const Certificate: FC<CertificateProps> = ({ certificate }) => {
 								certificate.title
 							)}
 						</strong>{' '}
-					</div>
-				</Cell>
-				<Cell height={1} width={1}>
-					<div>{format(new Date(certificate.date), 'MM/yyyy')}</div>
-				</Cell>
-				<Cell width={1}>
-					<em>
-						{certificate.institute}
-					</em>
-				</Cell>
-			</Grid>
+						{format(new Date(certificate.date), 'MM/yyyy')}
+					</UpperPart>
+					<em>{certificate.institute}</em>
+				</CertificateBody>
+			</Parent>
 		</StyledCertificate>
 	);
 };
