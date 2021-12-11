@@ -3,7 +3,7 @@ export const brandColours = {
 	lightGrey: '#afb5bf',
 	black: '#000',
 	darkGrey: '#192f39',
-	primary: '#000',
+	primary: '#fff',
 	primaryDark: '#000',
 	secondary: '#e63946',
 };
