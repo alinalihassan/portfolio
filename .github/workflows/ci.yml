@@ -57,6 +57,7 @@ jobs:
 
     - name: Build and Push Image
       run: |-
+        docker system prune -a
         docker build --tag ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest .
         docker push ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
 
