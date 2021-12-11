@@ -1,10 +1,8 @@
 import { FC } from 'react';
 import { format } from 'date-fns';
-import { Flex, VerticalFlex, CertificateContainer, StyledCertificate } from './styles';
+import { StyledCertificate } from './styles';
 import { ICertificate } from 'Types/certificate';
 import Image from 'next/image';
-import TerraformBadge from 'Public/assets/badge-terraform.png';
-import ScrumBadge from 'Public/assets/badge-psmi.svg';
 import { Grid, Cell } from "styled-css-grid";
 
 export interface CertificateProps {
@@ -15,7 +13,7 @@ const Certificate: FC<CertificateProps> = ({ certificate }) => {
 	return (
 		<StyledCertificate>
 			<Grid columns={12} rows={2}>
-				<Cell width={1} height={2}><img src={certificate.image} width="56px" height="56px" alt="Certificate Badge" /></Cell>
+				<Cell width={1} height={2}><Image src={certificate.image} width="56px" height="56px" alt="Certificate Badge" /></Cell>
 				<Cell height={1} width={10}>
 					<div>
 						<strong>
