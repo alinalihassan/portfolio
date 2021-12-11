@@ -27,9 +27,6 @@
       "Organisms/*": [
         "./src/components/organisms/*"
       ],
-      "Species/*": [
-        "./src/components/species/*"
-      ],
       "Templates/*": [
         "./src/components/templates/*"
       ],
@@ -39,26 +36,8 @@
       "Types/*": [
         "./src/types/*"
       ],
-      "Config": [
-        "./src/config/"
-      ],
-      "Config/*": [
-        "./src/config/*"
-      ],
       "Styles/*": [
         "./src/styles/*"
-      ],
-      "Hooks": [
-        "./src/hooks/"
-      ],
-      "Hooks/*": [
-        "./src/hooks/*"
-      ],
-      "MockData": [
-        "./src/mocks"
-      ],
-      "MockData/*": [
-        "./src/mocks/*"
       ],
       "Pages/*": [
         "./src/pages*"
