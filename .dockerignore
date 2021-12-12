@@ -10,3 +10,6 @@
 
 # Module directory
 .terraform
+
+*Dockerfile*
+node_modules
