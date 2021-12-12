@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/alinalihassan/portfolio/compare/v1.0.3...v1.0.4) (2021-12-12)
+
+
+### Performance Improvements
+
+* :zap: Disable cache to test possible improvement gains for Docker build ([a0f4085](https://github.com/alinalihassan/portfolio/commit/a0f40851a6901721567a2303cafbab393f79a2f8))
+
 ## [1.0.3](https://github.com/alinalihassan/portfolio/compare/v1.0.2...v1.0.3) (2021-12-12)
 
 
