@@ -105,6 +105,9 @@ jobs:
         node-version: '16'
         check-latest: true
   
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
     - name: Make Release
       run: npx semantic-release
       env:
