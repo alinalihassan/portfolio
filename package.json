@@ -14,8 +14,7 @@
 		"url": "https://github.com/alinalihassan/portfolio"
 	},
 	"scripts": {
-		"build": "next build",
-		"post-build": "next-sitemap",
+		"build": "next build && next-sitemap",
 		"dev": "next dev",
 		"start": "next start",
 		"lint": "next lint"

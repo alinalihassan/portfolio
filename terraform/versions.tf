@@ -7,7 +7,7 @@ terraform {
     }
   }
 
-  backend "remote" {
+  cloud {
     organization = "alinalihassan"
 
     workspaces {
