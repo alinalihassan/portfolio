@@ -55,6 +55,7 @@ jobs:
         password: "${{ secrets.GCLOUD_SERVICE_KEY }}"
         registry: ${{ secrets.GCLOUD_REGISTRY_URL }}
         image_name: ${{ secrets.APP_NAME }}
+        push_image_and_stages: false
 
     - name: Deploy to Cloud Run
       id: deploy
