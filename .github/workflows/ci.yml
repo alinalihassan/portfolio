@@ -89,8 +89,6 @@ jobs:
       id: apply
       run: terraform apply -auto-approve
       working-directory: terraform
-      # env:
-      #   GOOGLE_CREDENTIALS: ${{ secrets.GCLOUD_CREDENTIALS }}
 
   release:
     needs: deploy

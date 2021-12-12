@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Monorepo package dependencies
+  # Project package dependencies
   - package-ecosystem: "npm"
     directory: "/"
     target-branch: develop
