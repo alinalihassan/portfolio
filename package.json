@@ -43,6 +43,7 @@
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/git": "^10.0.1",
 		"@types/lodash.orderby": "^4.6.6",
 		"@types/nprogress": "^0.2.0",
 		"@types/react-redux": "^7.1.20",
