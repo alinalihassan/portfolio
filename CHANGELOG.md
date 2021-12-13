@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/alinalihassan/portfolio/compare/v1.0.4...v1.0.5) (2021-12-13)
+
+
+### Bug Fixes
+
+* :bug: fixed CICD not logged in to registry ([51e24ba](https://github.com/alinalihassan/portfolio/commit/51e24ba0ca37b95e188ad09e5bf6b8a0445473e5))
+* :zap: Testing faster CI Docker build ([c7a6323](https://github.com/alinalihassan/portfolio/commit/c7a6323ef08142f293ee6a76fd2053a791d9313d))
+
 ## [1.0.4](https://github.com/alinalihassan/portfolio/compare/v1.0.3...v1.0.4) (2021-12-12)
 
 
