@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/alinalihassan/portfolio/compare/v1.0.5...v1.0.6) (2021-12-13)
+
+
+### Bug Fixes
+
+* :bug: Fixed Semantic Release no longer making GitHub Releases ([3e52d06](https://github.com/alinalihassan/portfolio/commit/3e52d0669678e7063bcad543fb5958bd63469492))
+
 ## [1.0.5](https://github.com/alinalihassan/portfolio/compare/v1.0.4...v1.0.5) (2021-12-13)
 
 
