@@ -43,7 +43,9 @@
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/commit-analyzer": "^9.0.2",
 		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/release-notes-generator": "^10.0.3",
 		"@types/lodash.orderby": "^4.6.6",
 		"@types/nprogress": "^0.2.0",
 		"@types/react-redux": "^7.1.20",
@@ -57,5 +59,22 @@
 	},
 	"engines": {
 		"node": ">=14"
+	},
+	"release": {
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			[
+				"@semantic-release/npm",
+				{
+					"npmPublish": false
+				}
+			],
+			"@semantic-release/changelog",
+			"@semantic-release/git"
+		],
+		"branches": [
+			"main"
+		]
 	}
 }
