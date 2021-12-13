@@ -45,6 +45,7 @@
 		"@semantic-release/changelog": "^6.0.1",
 		"@semantic-release/commit-analyzer": "^9.0.2",
 		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/github": "^8.0.2",
 		"@semantic-release/release-notes-generator": "^10.0.3",
 		"@types/lodash.orderby": "^4.6.6",
 		"@types/nprogress": "^0.2.0",
@@ -71,7 +72,8 @@
 				}
 			],
 			"@semantic-release/changelog",
-			"@semantic-release/git"
+			"@semantic-release/git",
+			"@semantic-release/github"
 		],
 		"branches": [
 			"main"
