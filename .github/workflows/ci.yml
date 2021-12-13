@@ -48,6 +48,11 @@ jobs:
         project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
         credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }}
 
+    - name: Build & Deploy Docker Image
+      run: |-
+        docker build --tag ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest .
+        docker push ${{ secrets.GCLOUD_REGISTRY_URL }}/${{ secrets.GCLOUD_PROJECT_ID }}/${{ secrets.APP_NAME }}:latest
+
     - name: Build and Push Image
       uses: whoan/docker-build-with-cache-action@v5
       with:
