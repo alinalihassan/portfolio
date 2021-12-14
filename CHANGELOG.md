@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/alinalihassan/portfolio/compare/v1.0.7...v1.0.8) (2021-12-14)
+
+
+### Performance Improvements
+
+* :zap: Improved font and badges performance by self hosting ([e8f2920](https://github.com/alinalihassan/portfolio/commit/e8f2920dbf23e53f2bd5516e746da135b5e0d9dc))
+
 ## [1.0.7](https://github.com/alinalihassan/portfolio/compare/v1.0.6...v1.0.7) (2021-12-14)
 
 
