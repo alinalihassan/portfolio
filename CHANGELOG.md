@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/alinalihassan/portfolio/compare/v1.0.8...v1.0.9) (2021-12-14)
+
+
+### Bug Fixes
+
+* :bug: Reverted assets for certificates being stored locally ([8b76a36](https://github.com/alinalihassan/portfolio/commit/8b76a36548ec836425d9cced75fcdde4bfc387f1))
+
 ## [1.0.8](https://github.com/alinalihassan/portfolio/compare/v1.0.7...v1.0.8) (2021-12-14)
 
 
