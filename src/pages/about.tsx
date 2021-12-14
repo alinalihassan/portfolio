@@ -83,7 +83,7 @@ function About({ jobs, education, certificates }: IProps) {
 	);
 }
 
-const Headline = styled.h2`
+const Headline = styled.h1`
 	font-size: 2rem;
 	margin-bottom: 0;
 

@@ -69,7 +69,7 @@ export async function getStaticProps() {
 	};
 };
 
-const Headline = styled.h2`
+const Headline = styled.h1`
 	font-size: 2rem;
 
 	span {

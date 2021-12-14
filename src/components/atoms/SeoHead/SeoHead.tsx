@@ -29,7 +29,7 @@ const SeoHead: FC<HeadProps> = ({
 			<meta name="og:title" content={title} />
 			<meta name="og:description" content={description} />
 			<meta name="og:type" content="website" />
-			<meta name="og:url" content="https://jacobherper.com/" />
+			<meta name="og:url" content="https://alinalihassan.com/" />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={description} />
