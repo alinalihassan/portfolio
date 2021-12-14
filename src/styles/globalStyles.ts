@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+	@font-face {
+			font-family: 'Inter';
+			src: url('/fonts/Inter.ttf') format("truetype-variations");
+			font-weight: 1 999;
+	}
 	html {
 		line-height: 1.5;
 		-webkit-text-size-adjust: 100%;
