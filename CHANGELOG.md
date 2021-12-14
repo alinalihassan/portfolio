@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/alinalihassan/portfolio/compare/v1.0.6...v1.0.7) (2021-12-14)
+
+
+### Bug Fixes
+
+* :wrench: fixed and improved some SEO related configurations ([58dd5b5](https://github.com/alinalihassan/portfolio/commit/58dd5b5171d4d52efdb039d686c466077fd852e2))
+
 ## [1.0.6](https://github.com/alinalihassan/portfolio/compare/v1.0.5...v1.0.6) (2021-12-13)
 
 
