@@ -13,12 +13,10 @@ const Certificate: FC<CertificateProps> = ({ certificate }) => {
 	return (
 		<StyledCertificate>
 			<Parent>
-				<Image
+				<img
 					src={certificate.image}
 					width="56px"
 					height="56px"
-					placeholder="blur"
-					blurDataURL={shimmer(56, 56)}
 					alt="Certificate Badge" />
 				<CertificateBody>
 					<UpperPart>
