@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/alinalihassan/portfolio/compare/v1.0.9...v1.0.10) (2021-12-19)
+
+
+### Bug Fixes
+
+* Fixed badges ([8614001](https://github.com/alinalihassan/portfolio/commit/86140013569c5a07a48fa41cc3db248a2c3e96d5))
+
 ## [1.0.9](https://github.com/alinalihassan/portfolio/compare/v1.0.8...v1.0.9) (2021-12-14)
 
 
