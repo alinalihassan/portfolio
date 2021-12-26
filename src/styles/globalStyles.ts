@@ -6,6 +6,11 @@ export const GlobalStyles = createGlobalStyle`
 			src: url('/fonts/Inter.ttf') format("truetype-variations");
 			font-weight: 1 999;
 	}
+	@font-face {
+			font-family: 'FiraCode';
+			src: url('/fonts/FiraCode.ttf') format("truetype-variations");
+			font-weight: 1 999;
+	}
 	html {
 		line-height: 1.5;
 		-webkit-text-size-adjust: 100%;
@@ -40,7 +45,13 @@ export const GlobalStyles = createGlobalStyle`
 		overflow: visible;
 	}
 	pre {
-		font-family: monospace, monospace;
+		padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+		background-color: ${({ theme }) => theme.codeBlock};
+    border-radius: 6px;
+		font-family: "Firacode", monospace;
 		font-size: 1em;
 	}
 	a {
@@ -63,8 +74,14 @@ export const GlobalStyles = createGlobalStyle`
 	code,
 	kbd,
 	samp {
-		font-family: monospace, monospace;
-		font-size: 1em;
+    background-color: #afb8c133;
+    border-radius: 6px;
+		color: ${({ theme }) => theme.codeText};
+		font-family: 'Inter', sans-serif;
+	}
+	pre code {
+    background-color: #00000000;
+		font-family: "Firacode", monospace;
 	}
 	small {
 		font-size: 80%;

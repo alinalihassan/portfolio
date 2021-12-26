@@ -12,5 +12,7 @@ declare module 'styled-components' {
 		grey: string;
 		headline: string;
 		primary: string;
+		codeBlock: string;
+		codeText: string;
 	}
 }

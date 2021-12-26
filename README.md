@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/github/license/alinalihassan/portfolio)](LICENSE)
 [![Code Size](https://img.shields.io/github/languages/code-size/alinalihassan/portfolio)](https://github.com/alinalihassan/portfolio)
 
-Credit to @jakeherp for the huge amount of work on his portfolio. I've decided to fork his repository to use it as a base of my portfolio to learn more about [Next.js](https://nextjs.org).
+Credit to [@jakeherp](https://github.com/jakeherp) for the huge amount of work on his portfolio. I've decided to fork his repository to use it as a base of my portfolio to learn more about [Next.js](https://nextjs.org).
 
 ## 🛠️ Build
 

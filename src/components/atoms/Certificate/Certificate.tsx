@@ -2,8 +2,6 @@ import { FC } from 'react';
 import { format } from 'date-fns';
 import { StyledCertificate, Parent, UpperPart, CertificateBody } from './styles';
 import { ICertificate } from 'Types/certificate';
-import Image from 'next/image';
-import { shimmer } from 'Utils/shimmer';
 
 export interface CertificateProps {
 	certificate: ICertificate;
