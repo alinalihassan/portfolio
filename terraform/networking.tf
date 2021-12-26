@@ -9,6 +9,7 @@ resource "google_compute_region_network_endpoint_group" "portfolio_neg" {
 
 resource "google_compute_backend_service" "portfolio_backend_service" {
   name       = "portfolio-backend-service"
+  protocol   = "HTTPS"
   enable_cdn = true
   log_config {
     enable      = true
@@ -30,9 +31,18 @@ resource "google_compute_url_map" "default" {
   default_service = google_compute_backend_service.portfolio_backend_service.id
 }
 
+resource "google_compute_url_map" "https_redirect" {
+  name = "portfolio-https-redirect"
+  default_url_redirect {
+    https_redirect         = true
+    redirect_response_code = "MOVED_PERMANENTLY_DEFAULT"
+    strip_query            = false
+  }
+}
+
 resource "google_compute_target_http_proxy" "http" {
   name    = "portfolio-http-proxy"
-  url_map = google_compute_url_map.default.id
+  url_map = google_compute_url_map.https_redirect.id
 }
 
 resource "google_compute_global_forwarding_rule" "http" {
