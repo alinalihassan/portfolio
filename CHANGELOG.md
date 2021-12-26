@@ -1,3 +1,12 @@
+## [1.0.12](https://github.com/alinalihassan/portfolio/compare/v1.0.11...v1.0.12) (2021-12-26)
+
+
+### Bug Fixes
+
+* Added HTTPS redirect ([43c2487](https://github.com/alinalihassan/portfolio/commit/43c2487a7ed5256f970ccbafd91a08ff9314a61e))
+* Added new blog post, improved blog markdown and blog posts ([96b69dc](https://github.com/alinalihassan/portfolio/commit/96b69dcc5521c5ac766956fcde76256d2f425e55))
+* Removed the other domain, instead chose one primary and one forwarding ([b18b662](https://github.com/alinalihassan/portfolio/commit/b18b662d301c5341313f6364902975944afe8a27))
+
 ## [1.0.11](https://github.com/alinalihassan/portfolio/compare/v1.0.10...v1.0.11) (2021-12-19)
 
 
