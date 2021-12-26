@@ -22,8 +22,3 @@ variable "domain_name" {
   description = "Domain name of the application"
   default     = "alinalihassan.com"
 }
-
-variable "domain_name_alt" {
-  description = "Domain name alternative of the application"
-  default     = "hassanalinali.com"
-}

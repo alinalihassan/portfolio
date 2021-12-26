@@ -58,8 +58,7 @@ resource "google_compute_target_https_proxy" "default" {
   url_map = google_compute_url_map.default.id
 
   ssl_certificates = [
-    google_compute_managed_ssl_certificate.alinalihassan.id,
-    google_compute_managed_ssl_certificate.hassanalinali.id
+    google_compute_managed_ssl_certificate.alinalihassan.id
   ]
 }
 
@@ -68,13 +67,5 @@ resource "google_compute_managed_ssl_certificate" "alinalihassan" {
 
   managed {
     domains = ["${var.domain_name}.", "www.${var.domain_name}."]
-  }
-}
-
-resource "google_compute_managed_ssl_certificate" "hassanalinali" {
-  name = "portfolio-ssl-cert-alias"
-
-  managed {
-    domains = ["${var.domain_name_alt}.", "www.${var.domain_name_alt}."]
   }
 }
