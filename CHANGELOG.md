@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/alinalihassan/portfolio/compare/v1.0.13...v1.0.14) (2021-12-26)
+
+
+### Bug Fixes
+
+* security changes to the configuration ([b467457](https://github.com/alinalihassan/portfolio/commit/b46745798eb5cc45c912ca4e2f59e3a5723cb3b9))
+
 ## [1.0.13](https://github.com/alinalihassan/portfolio/compare/v1.0.12...v1.0.13) (2021-12-26)
 
 
