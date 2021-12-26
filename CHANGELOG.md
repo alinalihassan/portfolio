@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/alinalihassan/portfolio/compare/v1.0.12...v1.0.13) (2021-12-26)
+
+
+### Bug Fixes
+
+* Added reading-time package for more accurate assesment ([664565f](https://github.com/alinalihassan/portfolio/commit/664565f065da901faede1fd5236e236d4d1a1656))
+
 ## [1.0.12](https://github.com/alinalihassan/portfolio/compare/v1.0.11...v1.0.12) (2021-12-26)
 
 
