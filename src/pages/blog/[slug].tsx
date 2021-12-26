@@ -9,6 +9,7 @@ import { Container } from 'Atoms/Container';
 import { List } from 'Atoms/List';
 import { SeoHead } from 'Atoms/SeoHead';
 import { shimmer } from 'Utils/shimmer';
+import readingTime from 'reading-time';
 
 export default function BlogPost({ post, mdxSource }: any) {
 	const { title, description, date, tags } = post;
@@ -28,8 +29,7 @@ export default function BlogPost({ post, mdxSource }: any) {
 		ul: (props: any) => <List {...props} />,
 	};
 
-	const numOfWords = mdxSource.compiledSource.split(' ').length;
-	const readTime = Math.ceil(numOfWords / 250);
+	const readTime = Math.ceil(readingTime(mdxSource.compiledSource).minutes);
 
 	return (
 		<>
