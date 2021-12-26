@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/alinalihassan/portfolio/compare/v1.0.10...v1.0.11) (2021-12-19)
+
+
+### Bug Fixes
+
+* Replaced Next Image to img temporarely ([5f92cb9](https://github.com/alinalihassan/portfolio/commit/5f92cb9f50d66892659b44a95f2bacac8aa906b7))
+
 ## [1.0.10](https://github.com/alinalihassan/portfolio/compare/v1.0.9...v1.0.10) (2021-12-19)
 
 
