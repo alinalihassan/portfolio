@@ -2,6 +2,9 @@ resource "google_dns_managed_zone" "alinalihassan_zone" {
   name        = "alinalihassan-zone"
   dns_name    = "alinalihassan.com."
   description = "alinalihassan DNS zone"
+  dnssec_config {
+    state = "on"
+  }
 }
 
 resource "google_dns_record_set" "alinalihassan_zone_www" {
