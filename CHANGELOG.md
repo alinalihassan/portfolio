@@ -1,3 +1,10 @@
+## [1.0.17](https://github.com/alinalihassan/portfolio/compare/v1.0.16...v1.0.17) (2021-12-27)
+
+
+### Bug Fixes
+
+* Fixed mentions of multithreading in Typescript ([cc6b63f](https://github.com/alinalihassan/portfolio/commit/cc6b63f4000dbd715fa117f38bf356bd0ea7c94f))
+
 ## [1.0.16](https://github.com/alinalihassan/portfolio/compare/v1.0.15...v1.0.16) (2021-12-27)
 
 
