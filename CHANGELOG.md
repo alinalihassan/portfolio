@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/alinalihassan/portfolio/compare/v1.0.15...v1.0.16) (2021-12-27)
+
+
+### Bug Fixes
+
+* :memo: Updated blog post to include top-level await usage example ([07515bc](https://github.com/alinalihassan/portfolio/commit/07515bcedaceb30a20e8eef376e3e30f0bd63eb9))
+
 ## [1.0.15](https://github.com/alinalihassan/portfolio/compare/v1.0.14...v1.0.15) (2021-12-27)
 
 
