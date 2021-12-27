@@ -12,10 +12,10 @@ When I started working with Typescript I fell in love with the way multithreadin
 I was able to write asynchronous code in a way that was easy to read and understand, and since it's integrated within the language you don't need to
 use any specific libraries like [asyncio in Python](https://docs.python.org/3/library/asyncio-task.html#coroutines).
 
-I started a projects a few months ago at work and I was excited to make the best use of multithreading in that particular scenario using NodeJS and Typescript.
+I started a project a few months ago at work and I was excited to make the best use of multithreading in that particular scenario using NodeJS and Typescript.
 The problem with that was that once I created a variable that I was planning to use in different modules/files, I couldn't export them to other parts
 of the application, nor was I able to unit test them, since it all had to be wrapped under an async function. Javascript had this problem too, but Google spent the time to
-integrate top-level await in V8 [more than 2 years ago](https://v8.dev/features/top-level-await), albeit with some changes required in order to use it.
+integrate top-level await in V8 [more than 2 years ago](https://v8.dev/features/top-level-await), albeit with some changes required to use it.
 
 Let us consider that you have an Express app that depends on some secrets, like the location of our database: 
 
@@ -31,10 +31,10 @@ let startApp = async () => {
 ```
 
 If you wrap your code in an async function, you can't export it, and making this function return everything we need to export could work, 
-but it's not a good practice, and we need to have another file in which we use the listen method. In this situation I felt like everything could be solved
+but it's not a good practice, and we need to have another file in which we use the listen method. In this situation, I felt like everything could be solved
 if I could get rid of those anonymous functions and use the `await` keyword instead.
 
-Unfortunately I found myself spending a lot of time figuring out different node versions, flags, tsconfig settings, whether it is even possible at all.
+Unfortunately, I found myself spending a lot of time figuring out different node versions, flags, tsconfig settings, whether it is even possible at all.
 Microsoft said [Typescript 3.8 is supposed to support top-level await](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#top-level-await) 
 feature that ECMAScript 2017 introduced, but I was not able to get it to work. Unsurprisingly, [the proposal is set for publication in 2022](https://github.com/tc39/proposals/blob/main/finished-proposals.md), next year.
 But that doesn't mean we stop there. Luckily after many Stackoverflow pages and GitHub issues I was able to find a solution that worked.
@@ -63,7 +63,7 @@ And add this configuration in `tsconfig.json`:
 With these changes applied, [your project will behave differently](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#top-level-await). Read below a note from Microsoft's documentation on some of the changes you'd expect.
 > Note there's a subtlety: top-level await only works at the top level of a module, and files are only considered modules when TypeScript finds an import or an export. In some basic cases, you might need to write out export {} as some boilerplate to make sure of this.
 
-Remember that many of these settings are following this post are experimental, and they might change with time. It's likely that it will be much easier
+Remember that many of these settings are following this post are experimental, and they might change with time. It will likely be much easier
 to use top-level await in the future starting from 2022.
 
 We may also need to add a flag to NodeJS to enable top-level await, depending on your project.
@@ -97,9 +97,9 @@ For Jest, we can use `ts-jest`, but the package only recently got support for to
 }
 ```
 
-Now that we handled jest's configuration, we need to make a script to execute once we run `yarn run test`. Unfortunately we still need to pass some flags to NodeJS
+Now that we handled jest's configuration, we need to make a script to execute once we run `yarn run test`. Unfortunately, we still need to pass some flags to NodeJS
 to make it work. This might change with future Typescript targets, but as of writing `experimental-vm-modules` is still required, and `esnext` doesn't get rid of this error.
-Our test script in `package.json` will look similar like this:
+Our test script in `package.json` will look similar to this:
 ```json
 "scripts": {
   "test": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js"
