@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/alinalihassan/portfolio/compare/v1.0.14...v1.0.15) (2021-12-27)
+
+
+### Bug Fixes
+
+* Fixed typos in blog post ([63d6e0b](https://github.com/alinalihassan/portfolio/commit/63d6e0b07f78b7b4b957bfe8d44b9033d3db922d))
+
 ## [1.0.14](https://github.com/alinalihassan/portfolio/compare/v1.0.13...v1.0.14) (2021-12-26)
 
 
