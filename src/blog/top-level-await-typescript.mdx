@@ -2,17 +2,17 @@
 slug: top-level-await-typescript
 title: Top-level Await for Typescript in 2022
 description: 'A guide on how to start using top-level await in Typescript. This starter includes a TypeScript repo with the configuration necessary for Nodemon and Jest as well.'
-tags: [web, typescript, javascript, node, nodemon, jest, multithreading, async, await]
+tags: [web, typescript, javascript, node, nodemon, jest, asynchronous, async, await]
 date: '2021-12-26'
 ---
 
 ![Header](https://storage.googleapis.com/alinalihassan-portfolio-assets/top-level-await-typescript-header.jpeg)
 
-When I started working with Typescript I fell in love with the way multithreading got adapted in the language syntax.
+When I started working with Typescript I fell in love with the way asynchronous and promise-based functions got adapted in the language syntax.
 I was able to write asynchronous code in a way that was easy to read and understand, and since it's integrated within the language you don't need to
 use any specific libraries like [asyncio in Python](https://docs.python.org/3/library/asyncio-task.html#coroutines).
 
-I started a project a few months ago at work and I was excited to make the best use of multithreading in that particular scenario using NodeJS and Typescript.
+I started a project a few months ago at work and I was excited to make the best use of promises in that particular scenario using NodeJS and Typescript.
 The problem with that was that once I created a variable that I was planning to use in different modules/files, I couldn't export them to other parts
 of the application, nor was I able to unit test them, since it all had to be wrapped under an async function. Javascript had this problem too, but Google spent the time to
 integrate top-level await in V8 [more than 2 years ago](https://v8.dev/features/top-level-await), albeit with some changes required to use it.
