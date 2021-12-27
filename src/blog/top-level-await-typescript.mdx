@@ -119,6 +119,21 @@ For Nodemon, we can use the `ts-node` ESM loader with some additional settings t
 }
 ```
 
+## Adapting the code
+
+Now we can write our code without those pesky anonymous functions, and we can use top-level await. Rewriting our example from above, we can now export the secrets and app like so:
+
+```ts
+const secrets = await requestSecrets();
+const app = await createApp(secrets);
+
+app.listen(port, function () {
+  console.log(`🚀 App is listening on port ${port}!`);
+});
+
+export { secrets, app };
+```
+
 ## Conclusion
 
 I hope you'll find this post useful, and I hope you'll find it useful in your projects too. Even after some years since top-level await has been defined
