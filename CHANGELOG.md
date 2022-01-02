@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/alinalihassan/portfolio/compare/v1.1.0...v1.2.0) (2022-01-02)
+
+
+### Features
+
+* Added Heading Anchors ([6bd6883](https://github.com/alinalihassan/portfolio/commit/6bd6883b0d905c0854107a2973bd64d58e12535d))
+
 # [1.1.0](https://github.com/alinalihassan/portfolio/compare/v1.0.17...v1.1.0) (2022-01-02)
 
 
