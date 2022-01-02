@@ -20,6 +20,8 @@ integrate top-level await in V8 [more than 2 years ago](https://v8.dev/features/
 Let us consider that you have an Express app that depends on some secrets, like the location of our database: 
 
 ```ts
+// index.ts
+
 let startApp = async () => {
   const secrets = await requestSecrets();
   const app = await createApp(secrets);
@@ -44,12 +46,14 @@ But that doesn't mean we stop there. Luckily after many Stackoverflow pages and 
 To start off, we need to set some things up in our `package.json` and `tsconfig.json` files. Add an attribute to the top-level in `package.json`:
 
 ```json
+// package.json
 "type": "module"
 ```
 
 And add this configuration in `tsconfig.json`:
 
 ```json
+// tsconfig.json
 {
   "compilerOptions": {
     "target": "es2017",
@@ -70,6 +74,7 @@ We may also need to add a flag to NodeJS to enable top-level await, depending on
 I've added the flag to the following example `build` and `start` scripts:
 
 ```json
+// package.json
 "scripts": {
   "build": "tsc",
   "start": "node --es-module-specifier-resolution=node ./dist/index.js",
@@ -80,6 +85,7 @@ I've added the flag to the following example `build` and `start` scripts:
 
 For Jest, we can use `ts-jest`, but the package only recently got support for top-level await. You can add and/or modify this config in package.json, but the esm settings are essential:
 ```json
+// package.json
 "jest": {
   "preset": "ts-jest/presets/default-esm",
   "modulePathIgnorePatterns": [
@@ -101,6 +107,7 @@ Now that we handled jest's configuration, we need to make a script to execute on
 to make it work. This might change with future Typescript targets, but as of writing `experimental-vm-modules` is still required, and `esnext` doesn't get rid of this error.
 Our test script in `package.json` will look similar to this:
 ```json
+// package.json
 "scripts": {
   "test": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js"
 }
@@ -114,6 +121,7 @@ It allows us to configure Jest properly, and luckily as of writing this post, we
 For Nodemon, we can use the `ts-node` ESM loader with some additional settings to NodeJS. The following script will do:
 
 ```json
+// package.json
 "scripts": {
   "dev": "nodemon -x node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm index.ts"
 }
@@ -124,6 +132,7 @@ For Nodemon, we can use the `ts-node` ESM loader with some additional settings t
 Now we can write our code without those pesky anonymous functions, and we can use top-level await. Rewriting our example from above, we can now export the secrets and app like so:
 
 ```ts
+// index.ts
 const secrets = await requestSecrets();
 const app = await createApp(secrets);
 

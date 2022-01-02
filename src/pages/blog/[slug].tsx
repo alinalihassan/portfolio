@@ -8,6 +8,7 @@ import { getAllDocuments, getBySlug } from 'Utils/api';
 import { Container } from 'Atoms/Container';
 import { List } from 'Atoms/List';
 import { CodeBlock } from 'Atoms/CodeBlock';
+import { H2 } from 'Atoms/H2';
 import { SeoHead } from 'Atoms/SeoHead';
 import { shimmer } from 'Utils/shimmer';
 import readingTime from 'reading-time';
@@ -29,6 +30,7 @@ export default function BlogPost({ post, mdxSource }: any) {
 		),
 		ul: (props: any) => <List {...props} />,
 		code: (props: any) => <CodeBlock {...props} />,
+		h2: (props: any) => <H2 {...props} />,
 	};
 
 	const readTime = Math.ceil(readingTime(mdxSource.compiledSource).minutes);
