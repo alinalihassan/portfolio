@@ -45,14 +45,8 @@ export const GlobalStyles = createGlobalStyle`
 		overflow: visible;
 	}
 	pre {
-		padding: 16px;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-		background-color: ${({ theme }) => theme.codeBlock};
     border-radius: 6px;
 		font-family: "Firacode", monospace;
-		font-size: 1em;
 	}
 	a {
 		background-color: transparent;
@@ -76,11 +70,11 @@ export const GlobalStyles = createGlobalStyle`
 	samp {
     background-color: #afb8c133;
     border-radius: 6px;
+		padding: 3px;
 		color: ${({ theme }) => theme.codeText};
 		font-family: 'Inter', sans-serif;
 	}
 	pre code {
-    background-color: #00000000;
 		font-family: "Firacode", monospace;
 	}
 	small {
