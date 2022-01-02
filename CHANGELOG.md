@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/alinalihassan/portfolio/compare/v1.0.17...v1.1.0) (2022-01-02)
+
+
+### Features
+
+* Added custom code block ([2141967](https://github.com/alinalihassan/portfolio/commit/2141967c01e14f49f931c60b55918acc2a11fd78))
+
 ## [1.0.17](https://github.com/alinalihassan/portfolio/compare/v1.0.16...v1.0.17) (2021-12-27)
 
 
