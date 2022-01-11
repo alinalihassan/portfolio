@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/alinalihassan/portfolio/compare/v1.2.0...v1.2.1) (2022-01-11)
+
+
+### Bug Fixes
+
+* Added Worldline to job experience ([8785654](https://github.com/alinalihassan/portfolio/commit/87856541c7653aa9e4645331ce564cee88c79d3c))
+
 # [1.2.0](https://github.com/alinalihassan/portfolio/compare/v1.1.0...v1.2.0) (2022-01-02)
 
 
