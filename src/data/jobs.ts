@@ -58,6 +58,20 @@ const jobs = [
 		],
 	},
 	{
+		company: 'Worldline',
+		website: 'https://worldline.com',
+		jobTitle: 'Software Engineer',
+		startDate: '2020-04-01',
+		endDate: '2021-04-01',
+		place: 'Amsterdam, The Netherlands',
+		description: `I've had the opportunity to work for the largest European payment processing company using Java and Sprint Boot to work on Connect, their online payments platform, using the Spotify Scrum model. Additional I gained new responsibilities when I became the Scrum Master of my squad and took part in the Release Process of the product.`,
+		technologies: [
+			'Java',
+			'Spring',
+			'Jenkins',
+		],
+	},
+	{
 		company: 'Priogen Energy',
 		website: 'https://www.priogen.com',
 		jobTitle: 'Software Engineer',
