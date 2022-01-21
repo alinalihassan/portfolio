@@ -43,21 +43,11 @@ export default function BlogPost({ post, mdxSource }: any) {
 			/>
 			<Container>
 				<Headline>{title}</Headline>
-				<em>{readTime} minute read</em>
-				<MDXRemote {...mdxSource} components={components} />
 				<Flex>
-					<Text>
-						<em>Written on {format(new Date(date), 'd MMMM yyyy')}</em>
-					</Text>
-					<Text>
-						<strong>Tags:</strong>
-						<Tags>
-							{tags.map((tag: string) => (
-								<li key={tag}>#{tag}</li>
-							))}
-						</Tags>
-					</Text>
+					<em>{readTime} minute read</em>
+					<em>Written on {format(new Date(date), 'd MMMM yyyy')}</em>
 				</Flex>
+				<MDXRemote {...mdxSource} components={components} />
 			</Container>
 		</>
 	);
@@ -102,12 +92,6 @@ const Headline = styled.h2`
 	@media screen and (min-width: 768px) {
 		font-size: 3rem;
 	}
-`;
-
-const Text = styled.p`
-	margin-top: 3rem 0;
-	display: flex;
-	align-items: baseline;
 `;
 
 const Flex = styled.div`
