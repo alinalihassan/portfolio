@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/alinalihassan/portfolio/compare/v1.2.2...v1.2.3) (2022-01-21)
+
+
+### Bug Fixes
+
+* Fixed age not being calculated properly, fixed buttons not showing pointer cursor ([ccb1cc4](https://github.com/alinalihassan/portfolio/commit/ccb1cc44b79d9a5708ce6761b0f319a050c29f1b))
+* Updated blog elements ([8c57901](https://github.com/alinalihassan/portfolio/commit/8c57901ed0662d9edf569de5f8d5380e19238254))
+
 ## [1.2.2](https://github.com/alinalihassan/portfolio/compare/v1.2.1...v1.2.2) (2022-01-21)
 
 
