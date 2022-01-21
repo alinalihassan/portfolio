@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/alinalihassan/portfolio/compare/v1.2.1...v1.2.2) (2022-01-21)
+
+
+### Bug Fixes
+
+* Added new certificate, fixed typos ([a5045de](https://github.com/alinalihassan/portfolio/commit/a5045de394eb83ef7fbd37659a19194e0db5b0f1))
+
 ## [1.2.1](https://github.com/alinalihassan/portfolio/compare/v1.2.0...v1.2.1) (2022-01-11)
 
 
