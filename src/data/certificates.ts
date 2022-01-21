@@ -1,6 +1,15 @@
 const certificates = [
 	{
-		institute: 'Hashicorp',
+		institute: 'Amazon Web Services (AWS)',
+		link: 'https://www.credly.com/badges/4036ffb8-f9d7-4e89-9b9f-167ea625340b',
+		accessKey: null,
+		title: 'AWS Certified Cloud Practitioner',
+		image: '/assets/badge-aws-practitioner.png',
+		date: '2022-01-20',
+		place: 'remote',
+	},
+	{
+		institute: 'HashiCorp',
 		link: 'https://www.credly.com/badges/21c2861c-3e87-41e2-b8d6-311f87a3ad84',
 		accessKey: null,
 		title: 'Terraform Associate',
@@ -9,7 +18,7 @@ const certificates = [
 		place: 'remote',
 	},
 	{
-		institute: 'Scrum',
+		institute: 'Scrum.org',
 		link: 'https://www.scrum.org/certificates/554675',
 		accessKey: 'hassanalinali@gmail.com',
 		title: 'Professional Scrum Master I',

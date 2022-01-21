@@ -22,7 +22,7 @@ const jobs = [
 		startDate: '2021-05-01',
 		endDate: '2022-01-01',
 		place: 'Amsterdam, The Netherlands',
-		description: `At Arup I’ve worked on AWF, an internal product which allows non-technical engineers to create reusable workflows for data analysis or high-performance computing that spin up on demand infrastructure with different module-based puzzle pieces, and CRISP, which provides a framework for clients to asses their climate impact based on data of physical assets, and offers guidance on how to reach international standards of sustainability.`,
+		description: `At Arup I've worked on AWF, an internal product which allows non-technical engineers to create reusable workflows for data analysis or high-performance computing that spin up on demand infrastructure with different module-based puzzle pieces, and CRISP, which provides a framework for clients to asses their climate impact based on data of physical assets, and offers guidance on how to reach international standards of sustainability.`,
 		technologies: [
 			'Python',
 			'Django',
@@ -94,7 +94,7 @@ const jobs = [
 		startDate: '2018-01-01',
 		endDate: '2019-09-01',
 		place: 'Amsterdam, The Netherlands',
-		description: `As a Data Analyst at Priogen I was responsible to collect, manage and assure the quality of third-party data for end-users like our energy traders. During my first two years, I’ve had the opportunity to create the largest user-facing internal enterprise application in the company.`,
+		description: `As a Data Analyst at Priogen I was responsible to collect, manage and assure the quality of third-party data for end-users like our energy traders. During my first two years, I've had the opportunity to create the largest user-facing internal enterprise application in the company.`,
 		technologies: [
 			'Python',
 			'Pandas',
@@ -138,7 +138,7 @@ const jobs = [
 		startDate: '2016-06-01',
 		endDate: '2016-09-01',
 		place: 'Bucharest, Romania',
-		description: `I developed and improved on T-Me’s large-scale application template, efficient Multi-Device Testing, contributing greatly to the deployment speed and code-validation of apps used by tens of millions of users.`,
+		description: `I developed and improved on T-Me's large-scale application template, efficient Multi-Device Testing, contributing greatly to the deployment speed and code-validation of apps used by tens of millions of users.`,
 		technologies: [
 			'Java',
 			'Android Studio',
@@ -151,7 +151,7 @@ const jobs = [
 		startDate: '2015-08-01',
 		endDate: '2015-10-01',
 		place: 'Bucharest, Romania',
-		description: `As a junior developer, I had the opportunity to learn about data-driven A/B Testing and User Retention backed by Google Analytics and Crashlytics thanks to T-Me Studio’s immense user traffic in dozens of published apps. I have also drastically improved my collaboration skills and attention to detail as a result of working for the first time in a professional environment at the age of 16.`,
+		description: `As a junior developer, I had the opportunity to learn about data-driven A/B Testing and User Retention backed by Google Analytics and Crashlytics thanks to T-Me Studio's immense user traffic in dozens of published apps. I have also drastically improved my collaboration skills and attention to detail as a result of working for the first time in a professional environment at the age of 16.`,
 		technologies: [
 			'Java',
 			'Android Studio',
