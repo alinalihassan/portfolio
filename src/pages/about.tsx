@@ -1,4 +1,4 @@
-import { differenceInCalendarYears } from 'date-fns';
+import { differenceInYears } from 'date-fns';
 import styled from 'styled-components';
 import { useState } from 'react';
 
@@ -20,10 +20,14 @@ interface IProps {
 }
 
 function About({ jobs, education, certificates }: IProps) {
-	const [loadedJobs, setLoadedJobs] = useState(3);
+	const [loadedJobs, setLoadedJobs] = useState(5);
 
 	const loadMore = () => {
-		setLoadedJobs((prev) => prev + 3);
+		setLoadedJobs((prev) => prev + 5);
+	};
+
+	const downloadCV = () => {
+		window.open('https://storage.googleapis.com/alinalihassan-portfolio-assets/cv.pdf')
 	};
 
 	return (
@@ -41,7 +45,7 @@ function About({ jobs, education, certificates }: IProps) {
 					I have worked on a wide range of projects, from performant programming languages to modern web applications and APIs.
 				</p>
 				<p>
-					I am {differenceInCalendarYears(new Date(), new Date('1998-09-27'))}{' '}
+					I am {differenceInYears(new Date(), new Date('1998-09-27'))}{' '}
 					years old and have been a developer for as long as I can think.
 					The technologies I work with are Python using FastAPI for backend, and Typescript
 					for backend and/or frontend using Express, NestJS, Next.js, React, React Native, etc.
@@ -74,9 +78,7 @@ function About({ jobs, education, certificates }: IProps) {
 				))}
 
 				<Center>
-					<a href="https://storage.googleapis.com/alinalihassan-portfolio-assets/cv.pdf" target="_blank" rel="noreferrer">
-						Download my resume
-					</a>
+					<button onClick={downloadCV}><b>Download my resume</b></button>
 				</Center>
 			</Container>
 		</>

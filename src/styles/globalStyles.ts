@@ -118,6 +118,7 @@ export const GlobalStyles = createGlobalStyle`
 	[type='button'],
 	[type='reset'],
 	[type='submit'] {
+		cursor:pointer;
 		-webkit-appearance: button;
 	}
 	button::-moz-focus-inner,
