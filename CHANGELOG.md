@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/alinalihassan/portfolio/compare/v1.2.3...v1.2.4) (2022-02-09)
+
+
+### Bug Fixes
+
+* updated certifications and jobs section ([c5df70a](https://github.com/alinalihassan/portfolio/commit/c5df70a53ee28c5dc7c0781a587e3056de8c9974))
+
 ## [1.2.3](https://github.com/alinalihassan/portfolio/compare/v1.2.2...v1.2.3) (2022-01-21)
 
 
