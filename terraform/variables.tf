@@ -22,3 +22,8 @@ variable "domain_name" {
   description = "Domain name of the application"
   default     = "alinalihassan.com"
 }
+
+variable "home_url" {
+  description = "Home Assistant DNS"
+  default     = "alinalihassan.duckdns.org."
+}
