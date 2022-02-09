@@ -41,7 +41,7 @@ const jobs = [
 		website: 'https://www.charit.ee',
 		jobTitle: 'CEO & Founder',
 		startDate: '2021-01-01',
-		endDate: null,
+		endDate: '2022-01-01',
 		place: 'Amsterdam, The Netherlands',
 		description: `Founded my own non-profit startup to blend social entrepreneurship initiatives with consumer-centric software solutions. Charitee wants to empower people to contribute towards a better world.`,
 		technologies: [

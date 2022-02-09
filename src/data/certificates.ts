@@ -1,6 +1,15 @@
 const certificates = [
 	{
 		institute: 'Amazon Web Services (AWS)',
+		link: 'https://www.credly.com/badges/170811bf-5270-47f2-9ed8-66168bb75eec',
+		accessKey: null,
+		title: 'AWS Certified Solutions Architect - Associate',
+		image: '/assets/badge-aws-saa.png',
+		date: '2022-02-08',
+		place: 'remote',
+	},
+	{
+		institute: 'Amazon Web Services (AWS)',
 		link: 'https://www.credly.com/badges/4036ffb8-f9d7-4e89-9b9f-167ea625340b',
 		accessKey: null,
 		title: 'AWS Certified Cloud Practitioner',
