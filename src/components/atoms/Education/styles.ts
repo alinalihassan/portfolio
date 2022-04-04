@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledEducation = styled.div`
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 `;
 
 const Flex = styled.div`
