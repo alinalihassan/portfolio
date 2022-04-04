@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/alinalihassan/portfolio/compare/v1.2.4...v1.2.5) (2022-04-04)
+
+
+### Bug Fixes
+
+* Updated certificates ([9a3e377](https://github.com/alinalihassan/portfolio/commit/9a3e377abdcbdf4cc8290e657f42240882d49dc2))
+
 ## [1.2.4](https://github.com/alinalihassan/portfolio/compare/v1.2.3...v1.2.4) (2022-02-09)
 
 
