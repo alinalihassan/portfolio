@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/alinalihassan/portfolio/compare/v1.2.5...v1.2.6) (2022-04-18)
+
+
+### Bug Fixes
+
+* Fixed typo in certificate name ([df018a2](https://github.com/alinalihassan/portfolio/commit/df018a2fe1a5b12aed203080c989c5f9a0d62a16))
+
 ## [1.2.5](https://github.com/alinalihassan/portfolio/compare/v1.2.4...v1.2.5) (2022-04-04)
 
 
