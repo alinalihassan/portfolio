@@ -8,6 +8,7 @@ const jobs = [
 		place: 'Amsterdam, The Netherlands',
 		description: `Currently joined Nordcloud to work with clients migrating their on-premise infrastructure to the cloud, or improve their existing cloud infrastructure.`,
 		technologies: [
+			'Python',
 			'TypeScript',
 			'AWS',
 			'GCP',
