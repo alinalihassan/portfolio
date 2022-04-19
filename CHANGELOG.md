@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/alinalihassan/portfolio/compare/v1.2.6...v1.2.7) (2022-04-19)
+
+
+### Bug Fixes
+
+* Added latest AWS badges, added sysops badge ([4ed4eb9](https://github.com/alinalihassan/portfolio/commit/4ed4eb926768b0569ae46523dfddeb33b597e942))
+
 ## [1.2.6](https://github.com/alinalihassan/portfolio/compare/v1.2.5...v1.2.6) (2022-04-18)
 
 
