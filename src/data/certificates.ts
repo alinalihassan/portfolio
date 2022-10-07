@@ -1,6 +1,15 @@
 const certificates = [
 	{
 		institute: 'Amazon Web Services (AWS)',
+		link: 'https://www.credly.com/badges/e44b044f-cd98-4b7c-a498-83919feeafae',
+		accessKey: null,
+		title: 'Migration Ambassador Foundations (Business) 2022',
+		image: '/assets/badge-aws-maf.png',
+		date: '2022-06-02',
+		place: 'remote',
+	},
+	{
+		institute: 'Amazon Web Services (AWS)',
 		link: 'https://www.credly.com/badges/d39d9219-3205-4016-afeb-9eb70375f54d',
 		accessKey: null,
 		title: 'AWS Certified SysOps Administrator - Associate',
