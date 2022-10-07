@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/alinalihassan/portfolio/compare/v1.2.7...v1.2.8) (2022-10-07)
+
+
+### Bug Fixes
+
+* Added AWS maf badge ([434f4ed](https://github.com/alinalihassan/portfolio/commit/434f4ed6985b696fd7a8076362b176ce94bc3a51))
+
 ## [1.2.7](https://github.com/alinalihassan/portfolio/compare/v1.2.6...v1.2.7) (2022-04-19)
 
 
