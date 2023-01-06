@@ -4,6 +4,7 @@ import { GlobalStyles } from 'Styles/globalStyles';
 import { Layout } from 'Templates/Layout';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import { Analytics } from '@vercel/analytics/react';
 import { setTheme } from 'Redux/actions/theme';
 import { storeWrapper } from 'Redux/store';
 import { ThemeProvider } from 'styled-components';
@@ -58,6 +59,7 @@ let App = ({ Component, pageProps }: MyAppProps) => {
 	return (
 		<ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
 			<GlobalStyles />
+			<Analytics />
 			<Layout>
 				<Component {...pageProps} />
 			</Layout>
