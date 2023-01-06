@@ -1,6 +1,6 @@
 module.exports = {
   poweredByHeader: false,
-  assetPrefix: process.env.ASSET_HOST || "",
+  assetPrefix: process.env.ASSET_HOST || undefined,
   productionBrowserSourceMaps: process.env.NODE_ENV === "production",
   webpack(config) {
     config.module.rules.push({
@@ -38,8 +38,7 @@ module.exports = {
   images: {
     domains: ["storage.googleapis.com"],
   },
-  experimental: {
-    // Enables the styled-components SWC transform
+  compiler: {
     styledComponents: true,
   },
 };
