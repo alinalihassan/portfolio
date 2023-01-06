@@ -8,7 +8,7 @@ export interface CodeBlockProps {
 }
 
 const CodeBlock: FC<CodeBlockProps> = ({ children }) => {
-  if (!children || children.type !== 'code') return null;
+  if (!React.isValidElement(children) || children.type !== 'code') return null;
 
   const {
     props: { className, children: code = '' },

@@ -60,6 +60,9 @@
 		"semantic-release": "^19.0.5",
 		"tsconfig-paths-webpack-plugin": "^4.0.0"
 	},
+	"resolutions": {
+    "@types/react": "^18.0.21"
+	},
 	"release": {
 		"plugins": [
 			"@semantic-release/commit-analyzer",
