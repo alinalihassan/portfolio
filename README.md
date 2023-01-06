@@ -31,26 +31,6 @@ yarn build
 yarn start
 ```
 
-Or you can use the Dockerfile included:
-
-```bash
-docker build -t portfolio .
-docker run portfolio
-```
-
-## 🚀 Deploy
-
-Repository contains the [Terraform](https://www.terraform.io/) source used in deploying this to GCP. The existing GitHub Actions workflow takes care of deploy and updating the Terraform infrastructure. You can just replace the secrets used GitHub Actions with your own. Follow the documentation from each Github Action repository if one of the secrets' content is unclear.
-
-```yaml
-APP_NAME
-GCLOUD_PROJECT_ID
-GCLOUD_REGION
-GCLOUD_REGISTRY_URL
-GCLOUD_SERVICE_KEY
-TF_API_TOKEN
-```
-
 ## License
 
 [MIT](LICENSE) © Alin Ali Hassan
