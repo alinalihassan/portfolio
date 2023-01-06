@@ -39,14 +39,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 	}, []);
 
 	return (
-		<>
-			<ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-				<GlobalStyles />
-				<Layout>
-					<Component {...pageProps} />
-				</Layout>
-			</ThemeProvider>
-		</>
+		<ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+			<GlobalStyles />
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</ThemeProvider>
 	);
 }
 

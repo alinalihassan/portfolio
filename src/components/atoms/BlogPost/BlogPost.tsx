@@ -12,23 +12,23 @@ const BlogPost: FC<BlogPostProps> = ({
 	post: { title, description, slug, date, tags },
 }) => {
 	return (
-		<StyledBlogPost>
+        <StyledBlogPost>
 			<Link href={`/blog/${slug}`}>
-				<a>
-					<Flex>
-						<h1>{title}</h1>
-						<div>{format(new Date(date), 'dd/MM/yyyy')}</div>
-					</Flex>
-					<p>{description}</p>
-					<Tags>
-						{tags.map((tag: string) => (
-							<li key={tag}>#{tag}</li>
-						))}
-					</Tags>
-				</a>
-			</Link>
+
+                <Flex>
+                    <h1>{title}</h1>
+                    <div>{format(new Date(date), 'dd/MM/yyyy')}</div>
+                </Flex>
+                <p>{description}</p>
+                <Tags>
+                    {tags.map((tag: string) => (
+                        <li key={tag}>#{tag}</li>
+                    ))}
+                </Tags>
+
+            </Link>
 		</StyledBlogPost>
-	);
+    );
 };
 
 export { BlogPost };

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { format } from 'date-fns';
 import { StyledCertificate, Parent, UpperPart, CertificateBody } from './styles';
 import { ICertificate } from 'Types/certificate';
+import Image from 'next/image'
 
 export interface CertificateProps {
 	certificate: ICertificate;
@@ -11,10 +12,10 @@ const Certificate: FC<CertificateProps> = ({ certificate }) => {
 	return (
 		<StyledCertificate>
 			<Parent>
-				<img
+				<Image
 					src={certificate.image}
-					width="56px"
-					height="56px"
+					width={56}
+					height={56}
 					alt="Certificate Badge" />
 				<CertificateBody>
 					<UpperPart>

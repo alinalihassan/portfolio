@@ -29,7 +29,7 @@ export default function BlogPost({ post, mdxSource }: any) {
 			/>
 		),
 		ul: (props: any) => <List {...props} />,
-		code: (props: any) => <CodeBlock {...props} />,
+		pre: (props: any) => <CodeBlock {...props} />,
 		h2: (props: any) => <H2 {...props} />,
 	};
 

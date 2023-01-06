@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 	@font-face {
@@ -219,7 +219,7 @@ export const GlobalStyles = createGlobalStyle`
 		width: 100px;
 		height: 100%;
 		box-shadow: 0 0 10px ${({ theme }) => theme.primary}, 0 0 5px ${({ theme }) =>
-		theme.primary};
+  theme.primary};
 		opacity: 1.0;
 
 		-webkit-transform: rotate(3deg) translate(0px, -4px);

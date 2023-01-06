@@ -36,7 +36,7 @@ module.exports = {
   },
   publicRuntimeConfig: {},
   images: {
-    domains: ["storage.googleapis.com"],
+    domains: ["www.google.com"],
   },
   compiler: {
     styledComponents: true,

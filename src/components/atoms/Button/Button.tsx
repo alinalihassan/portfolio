@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { StyledButton, StyledLink } from './styles';
 
 export interface ButtonProps {
+	children?: React.ReactNode;
 	href?: string;
 	onClick?: (...args: any) => void;
 	target?: '_blank' | '_self' | '_parent';

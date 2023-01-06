@@ -8,26 +8,26 @@ interface NavigationProps {
 
 const Navigation: FC<NavigationProps> = ({ onClick }) => {
 	return (
-		<StyledNavigation>
+        <StyledNavigation>
 			<List>
 				<li>
-					<Link href="/">
-						<a onClick={onClick}>Home</a>
+					<Link href="/" onClick={onClick}>
+						Home
 					</Link>
 				</li>
 				<li>
-					<Link href="/about">
-						<a onClick={onClick}>About</a>
+					<Link href="/about" onClick={onClick}>
+						About
 					</Link>
 				</li>
 				<li>
-					<Link href="/blog">
-						<a onClick={onClick}>Blog</a>
+					<Link href="/blog" onClick={onClick}>
+						Blog
 					</Link>
 				</li>
 			</List>
 		</StyledNavigation>
-	);
+    );
 };
 
 export { Navigation };
