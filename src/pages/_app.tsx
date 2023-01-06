@@ -9,13 +9,30 @@ import { storeWrapper } from 'Redux/store';
 import { ThemeProvider } from 'styled-components';
 import { useEffect } from 'react';
 import { darkTheme, lightTheme } from 'Styles/themes';
-import { useDispatch, useSelector } from 'react-redux';
+import { Provider, useDispatch, useSelector } from 'react-redux';
+import { NextComponentType, NextPageContext } from 'next';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-function MyApp({ Component, pageProps }: AppProps) {
+let AppWrapper = ({ Component, ...rest }: AppProps) => {
+	const { store, props } = storeWrapper.useWrappedStore(rest);
+	const { pageProps } = props;
+
+	return (
+		<Provider store={store}>
+			<App Component={Component} pageProps={pageProps} />
+		</Provider>
+	)
+}
+
+interface MyAppProps {
+	Component: NextComponentType<NextPageContext>;
+	pageProps: any;
+}
+
+let App = ({ Component, pageProps }: MyAppProps) => {
 	const theme = useSelector(getTheme);
 	const dispatch = useDispatch();
 
@@ -48,4 +65,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 	);
 }
 
-export default storeWrapper.withRedux(MyApp);
+export default AppWrapper;
