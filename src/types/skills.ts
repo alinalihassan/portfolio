@@ -5,7 +5,7 @@ export interface ISkills {
     icon: string;
   }>;
   technologies: string[];
-  domains: string[];
+  interests: string[];
   frameworks: string[];
   cloud: string[];
   databases: string[];
