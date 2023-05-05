@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Heading = styled.h2`
   position: relative;
@@ -9,7 +9,7 @@ export const AnchorLink = styled.a`
   margin-top: 0.125em;
   margin-left: -1.2em;
   padding-right: 0.5em;
-  font-size: .85em;
+  font-size: 0.85em;
   opacity: 0;
   text-decoration: none;
   transition: 0.3s;

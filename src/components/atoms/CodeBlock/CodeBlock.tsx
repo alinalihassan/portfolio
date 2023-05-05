@@ -1,22 +1,29 @@
-import Highlight, { defaultProps, Language } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/vsDark';
-import React, { FC } from 'react';
-import { Line, LineContent, LineNo, Pre } from './styles';
+import Highlight, { defaultProps, Language } from "prism-react-renderer";
+import theme from "prism-react-renderer/themes/vsDark";
+import React, { FC } from "react";
+import { Line, LineContent, LineNo, Pre } from "./styles";
 
 export interface CodeBlockProps {
   children?: React.ReactNode;
 }
 
 const CodeBlock: FC<CodeBlockProps> = ({ children }) => {
-  if (!React.isValidElement(children) || children.type !== 'code') return null;
+  if (!React.isValidElement(children) || children.type !== "code") return null;
 
   const {
-    props: { className, children: code = '' },
+    props: { className, children: code = "" },
   } = children;
 
-  const language = className ? className.replace(/language-/, '') as Language : 'markup';
+  const language = className
+    ? (className.replace(/language-/, "") as Language)
+    : "markup";
   return (
-    <Highlight {...defaultProps} theme={theme} code={code.trim()} language={language}>
+    <Highlight
+      {...defaultProps}
+      theme={theme}
+      code={code.trim()}
+      language={language}
+    >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <Pre className={className} style={style}>
           {tokens.map((line, i) => (

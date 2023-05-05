@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledCertificate = styled.div`
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const Parent = styled.div`
@@ -10,13 +10,13 @@ const Parent = styled.div`
 `;
 
 const CertificateBody = styled.div`
-	width: 100%;
-	margin-left: 1rem;
+  width: 100%;
+  margin-left: 1rem;
 `;
 
 const UpperPart = styled.div`
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export { StyledCertificate, Parent, UpperPart, CertificateBody };

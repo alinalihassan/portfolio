@@ -1,22 +1,22 @@
-import { FC } from 'react';
-import { StyledButton, StyledLink } from './styles';
+import { FC } from "react";
+import { StyledButton, StyledLink } from "./styles";
 
 export interface ButtonProps {
-	children?: React.ReactNode;
-	href?: string;
-	onClick?: (...args: any) => void;
-	target?: '_blank' | '_self' | '_parent';
+  children?: React.ReactNode;
+  href?: string;
+  onClick?: (...args: any) => void;
+  target?: "_blank" | "_self" | "_parent";
 }
 
 const Button: FC<ButtonProps> = ({ children, href, target, onClick }) => {
-	if (href)
-		return (
-			<StyledLink href={href} target={target}>
-				{children}
-			</StyledLink>
-		);
+  if (href)
+    return (
+      <StyledLink href={href} target={target}>
+        {children}
+      </StyledLink>
+    );
 
-	return <StyledButton onClick={onClick}>{children}</StyledButton>;
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
 };
 
 export { Button };

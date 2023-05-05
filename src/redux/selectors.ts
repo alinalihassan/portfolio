@@ -1,3 +1,3 @@
-import { IState } from './store';
+import { IState } from "./store";
 
 export const getTheme = ({ theme }: IState) => theme.currentTheme;
